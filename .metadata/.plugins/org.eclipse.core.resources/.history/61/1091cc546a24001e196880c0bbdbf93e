@@ -1,0 +1,5 @@
+package com.address.services;
+
+public interface AddressService {
+
+}

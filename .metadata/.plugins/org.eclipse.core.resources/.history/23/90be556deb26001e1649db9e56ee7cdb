@@ -1,0 +1,19 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/microservice?useSSL=false
+spring.datasource.username=root
+spring.datasource.password=
+
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
+
+
+server.port:8081
+spring.application.name=address-app
+server.servlet.context-path=/address-app/api
+
+#discovery-service running url
+eureka.client.service-url.defaultZone=http://localhost:1987/eureka/
+
+#configPath is a key for map, you can set value and can access in another microservice e.g. here is employee-app
+eureka.instance.metadata-map.configPath=/address-app/api   

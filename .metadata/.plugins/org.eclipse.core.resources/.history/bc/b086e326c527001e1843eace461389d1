@@ -1,0 +1,17 @@
+
+#database properties
+#spring.datasource.url=jdbc:mysql://localhost:3306/microservice?useSSL=false
+#spring.datasource.username=root
+#spring.datasource.password=
+#spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQL5InnoDBDialect
+#spring.jpa.hibernate.ddl-auto=update
+#spring.jpa.show-sql=true
+#spring.jpa.properties.hibernate.format_sql=true
+
+# database properties & eureka properties comes from config-server--> git repository
+spring.config.import=optional:configserver:http://localhost:8888
+
+#server.port:8081
+#spring.application.name=address-app
+#server.servlet.context-path=/address-app/api
+

@@ -1,0 +1,14 @@
+package com.employee.feignclient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+import com.employee.dto.AddressDTO;
+
+@FeignClient
+public interface AddressClient {
+
+	@GetMapping("/address/{id}")
+	AddressDTO getAddressByEmployeeId(@PathVariable("id") int id);
+}
